@@ -3,3 +3,6 @@
 
 2024-07-08: 1.1.0
 - Add create_parent_module
+
+2024-07-08: 1.2.0
+- Add get_tf_printer_host

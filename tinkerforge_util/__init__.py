@@ -22,12 +22,14 @@ from tinkerforge_util.changed_directory import ChangedDirectory
 from tinkerforge_util.specialize_template import specialize_template
 from tinkerforge_util.write_file_if_different import write_file_if_different
 from tinkerforge_util.create_parent_module import create_parent_module
+from tinkerforge_util.get_tf_printer_host import get_tf_printer_host
 
-__version__ = '1.1.0'
+__version__ = '1.2.0'
 
 __all__ = [
     'ChangedDirectory',
     'specialize_template',
     'write_file_if_different',
     'create_parent_module',
+    'get_tf_printer_host',
 ]
