@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='tinkerforge_util',
-      version='1.2.0',
+      version='1.2.1',
       description='Python utilities for internal Tinkerforge usage',
       license='LGPLv2+',
       author='Tinkerforge GmbH',

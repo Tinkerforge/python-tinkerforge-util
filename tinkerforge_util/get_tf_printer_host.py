@@ -22,10 +22,13 @@ import re
 import os
 import sys
 import socket
-import tkinter.messagebox
 
 
 def get_tf_printer_host(task):
+    # import tkinter only if the function is actually use to avoid
+    # importing it for nothing on system that might not have tkinter
+    import tkinter.messagebox
+
     path = '~/tf_printer_host.txt'
     x = re.compile(r'^([A-Za-z0-9_-]+)\s+([A-Za-z0-9_\.-]+)$')
     host = None
