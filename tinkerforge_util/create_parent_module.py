@@ -28,7 +28,7 @@ def create_parent_module(path, module_name):
     if module_name in sys.modules:
         return
 
-    module_path = pathlib.Path(path)
+    module_path = pathlib.Path(path).absolute()
 
     while len(module_path.name) > 0 and module_path.name != module_name:
         module_path = module_path.parent
