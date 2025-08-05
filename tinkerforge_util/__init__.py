@@ -23,8 +23,9 @@ from tinkerforge_util.specialize_template import specialize_template
 from tinkerforge_util.write_file_if_different import write_file_if_different
 from tinkerforge_util.create_parent_module import create_parent_module
 from tinkerforge_util.get_tf_printer_host import get_tf_printer_host
+from tinkerforge_util.drop_stdin_buffer import drop_stdin_buffer
 
-__version__ = '1.2.2'
+__version__ = '1.3.0'
 
 __all__ = [
     'ChangedDirectory',
@@ -32,4 +33,5 @@ __all__ = [
     'write_file_if_different',
     'create_parent_module',
     'get_tf_printer_host',
+    'drop_stdin_buffer',
 ]
