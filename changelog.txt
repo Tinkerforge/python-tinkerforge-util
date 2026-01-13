@@ -16,3 +16,6 @@
 
 2025-08-05: 1.3.0
 - Add drop_stdin_buffer
+
+2026-01-13: 1.4.0
+- Add app_launcher

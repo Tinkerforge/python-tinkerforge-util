@@ -1,5 +1,5 @@
-tinkerforge-python-util (1.3.0) stable; urgency=medium
+tinkerforge-python-util (1.4.0) stable; urgency=medium
 
   * foobar
 
- -- Matthias Bolte <matthias@tinkerforge.com>  Tue, 05 Aug 2025 14:39:00 +0200
+ -- Matthias Bolte <matthias@tinkerforge.com>  Tue, 13 Jan 2026 11:59:20 +0100
