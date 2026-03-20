@@ -20,12 +20,13 @@
 
 import os
 import sys
-import termios
-import fcntl
 
 
 class NonBlockingInput:
     def __enter__(self):
+        import termios
+        import fcntl
+
         # canonical mode, no echo
         self.old = termios.tcgetattr(sys.stdin)
         new = termios.tcgetattr(sys.stdin)
@@ -37,6 +38,9 @@ class NonBlockingInput:
         fcntl.fcntl(sys.stdin, fcntl.F_SETFL, self.orig_fl | os.O_NONBLOCK)
 
     def __exit__(self, *args):
+        import termios
+        import fcntl
+
         # restore terminal to previous state
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old)
         fcntl.fcntl(sys.stdin, fcntl.F_SETFL, self.orig_fl)
