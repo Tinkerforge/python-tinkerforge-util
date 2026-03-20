@@ -18,8 +18,11 @@
 # Boston, MA 02111-1307, USA.
 #
 
+import os
+
+
 def write_file_if_different(path, new_content):
-    if type(new_content) == str:
+    if isinstance(new_content, str):
         new_content = bytes(new_content, encoding='utf-8')
 
     content_identical = False
@@ -28,9 +31,14 @@ def write_file_if_different(path, new_content):
         with open(path, 'rb') as f:
             old_content = f.read()
             content_identical = old_content == new_content
-    except:
+    except FileNotFoundError:
         pass
 
     if not content_identical:
+        path_dir = os.path.split(path)[0]
+
+        if len(path_dir) > 0:
+            os.makedirs(path_dir, exist_ok=True)
+
         with open(path, 'wb') as f:
             f.write(new_content)
