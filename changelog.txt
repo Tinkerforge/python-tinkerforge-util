@@ -19,3 +19,13 @@
 
 2026-01-13: 1.4.0
 - Add app_launcher
+
+2026-03-20: 1.5.0
+- Add colored
+- Add base58
+- Add get_serial_ports
+- Add misc
+- Add notify
+- Import termios and fcntl inside drop_stdin_buffer to avoid import error
+  if termios and fcntl are missing on systems that don't use drop_stdin_buffer
+- Create parent directory if missing in write_file_if_different
