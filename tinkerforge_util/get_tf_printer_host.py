@@ -44,7 +44,7 @@ def get_tf_printer_host(task):
                 m = x.match(line)
 
                 if m == None:
-                    message = 'WARNING: Invalid line in {0}: {1}'.format(path, repr(line))
+                    message = f'WARNING: Invalid line in {path}: {repr(line)}'
 
                     print(message)
                     tkinter.messagebox.showerror(title=path, message=message)
@@ -63,7 +63,7 @@ def get_tf_printer_host(task):
         pass
 
     if host == None:
-        message = 'ERROR: Printer host for task {0} not found in {1}'.format(task, path)
+        message = f'ERROR: Printer host for task {task} not found in {path}'
     else:
         try:
             with socket.create_connection((host, 9100), timeout=5):
@@ -71,7 +71,7 @@ def get_tf_printer_host(task):
 
             return host
         except Exception as e:
-            message = 'ERROR: Could not connect to printer at {0} for task {1}: {2}'.format(host, task, e)
+            message = f'ERROR: Could not connect to printer at {host} for task {task}: {e}'
 
     print(message)
     tkinter.messagebox.showerror(title=path, message=message)

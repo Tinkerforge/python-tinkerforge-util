@@ -39,7 +39,7 @@ def specialize_template(template_filename, destination_filename, replacements, c
             lines.append(line)
 
     if check_completeness and replaced != set(replacements.keys()):
-        raise Exception('Not all replacements for {0} have been applied. Missing are {1}'.format(template_filename, ', '.join(set(replacements.keys() - replaced))))
+        raise Exception(f'Not all replacements for {template_filename} have been applied. Missing are {", ".join(set(replacements.keys() - replaced))}')
 
     if destination_filename != None:
         write_file_if_different(destination_filename, "".join(lines))
