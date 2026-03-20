@@ -29,6 +29,7 @@ import tinkerforge_util.colored as colored
 from tinkerforge_util.base58 import base58_encode, base58_decode
 from tinkerforge_util.get_serial_ports import get_serial_ports
 from tinkerforge_util.misc import ok, fatal
+from tinkerforge_util.notify import notify, notify_clear
 
 __version__ = '1.4.0'
 
@@ -47,4 +48,6 @@ __all__ = [
     'get_serial_ports',
     'ok',
     'fatal',
+    'notify',
+    'notify_clear',
 ]
