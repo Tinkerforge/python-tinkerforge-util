@@ -8,4 +8,5 @@ setup(name='tinkerforge_util',
       author_email='matthias@tinkerforge.com',
       url='https://www.tinkerforge.com',
       packages=['tinkerforge_util'],
-      platforms=['Any'])
+      platforms=['Any'],
+      install_requires=['pyserial'])
