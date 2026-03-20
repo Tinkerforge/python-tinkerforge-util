@@ -26,6 +26,7 @@ from tinkerforge_util.get_tf_printer_host import get_tf_printer_host
 from tinkerforge_util.drop_stdin_buffer import drop_stdin_buffer
 from tinkerforge_util.app_launcher import app_launcher, AppLauncherAction
 import tinkerforge_util.colored as colored
+from tinkerforge_util.base58 import base58_encode, base58_decode
 
 __version__ = '1.4.0'
 
@@ -39,4 +40,6 @@ __all__ = [
     'app_launcher',
     'AppLauncherAction',
     'colored',
+    'base58_encode',
+    'base58_decode',
 ]
