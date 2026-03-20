@@ -25,6 +25,7 @@ from tinkerforge_util.create_parent_module import create_parent_module
 from tinkerforge_util.get_tf_printer_host import get_tf_printer_host
 from tinkerforge_util.drop_stdin_buffer import drop_stdin_buffer
 from tinkerforge_util.app_launcher import app_launcher, AppLauncherAction
+import tinkerforge_util.colored as colored
 
 __version__ = '1.4.0'
 
@@ -37,4 +38,5 @@ __all__ = [
     'drop_stdin_buffer',
     'app_launcher',
     'AppLauncherAction',
+    'colored',
 ]
