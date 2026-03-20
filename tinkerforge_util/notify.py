@@ -21,11 +21,15 @@
 import re
 import subprocess
 import collections
+import shutil
 
 NotifyContext = collections.namedtuple('NotifyContext', 'title icon_path id_')
 
 
 def notify(title, message, icon_path=None):
+    if shutil.which('notify-send') == None:
+        return None
+
     version = [int(x) for x in re.search(r'(\d+)\.(\d+)\.(\d+)', subprocess.check_output(['notify-send', '--version'], text=True)).groups()]
     args = ['notify-send']
 

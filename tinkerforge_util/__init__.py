@@ -31,7 +31,7 @@ from tinkerforge_util.get_serial_ports import get_serial_ports
 from tinkerforge_util.misc import ok, fatal
 from tinkerforge_util.notify import notify, notify_clear
 
-__version__ = '1.5.0'
+__version__ = '1.5.1'
 
 __all__ = [
     'ChangedDirectory',
