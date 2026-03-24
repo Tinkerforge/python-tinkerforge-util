@@ -2,7 +2,10 @@ __pycache__
 dist/*
 *.egg-info/*
 .pybuild/*
+setup.py
+debian/changelog
 debian/files
 debian/.debhelper/*
 debian/debhelper-build-stamp
 debian/python3-tinkerforge-util*
+tinkerforge_util/__init__.py
