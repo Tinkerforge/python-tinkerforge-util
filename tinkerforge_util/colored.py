@@ -56,32 +56,32 @@ def blink(*args):
     return _colored('5', *args)
 
 
-def red(*args):
-    return _colored('1;31', *args)
+def red(*args, bold=True):
+    return _colored('1;31' if bold else '31', *args)
 
 
-def green(*args):
-    return _colored('1;32', *args)
+def green(*args, bold=True):
+    return _colored('1;32' if bold else '32', *args)
 
 
-def yellow(*args):
-    return _colored('1;33', *args)
+def yellow(*args, bold=True):
+    return _colored('1;33' if bold else '33', *args)
 
 
-def blue(*args):
-    return _colored('1;34', *args)
+def blue(*args, bold=True):
+    return _colored('1;34' if bold else '34', *args)
 
 
-def purple(*args):
-    return _colored('1;35', *args)
+def purple(*args, bold=True):
+    return _colored('1;35' if bold else '35', *args)
 
 
-def cyan(*args):
-    return _colored('1;36', *args)
+def cyan(*args, bold=True):
+    return _colored('1;36' if bold else '36', *args)
 
 
-def gray(*args):
-    return _colored('1;90', *args)
+def gray(*args, bold=True):
+    return _colored('1;90' if bold else '90', *args)
 
 
 def strip(value):
