@@ -35,3 +35,6 @@
 
 2026-03-24: 1.6.0
 - Make bold colors optional
+
+2026-03-24: 1.7.0
+- Keep ok and fatal in misc

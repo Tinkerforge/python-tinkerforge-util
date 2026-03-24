@@ -28,7 +28,7 @@ from tinkerforge_util.app_launcher import app_launcher, AppLauncherAction
 import tinkerforge_util.colored as colored
 from tinkerforge_util.base58 import base58_encode, base58_decode
 from tinkerforge_util.get_serial_ports import get_serial_ports
-from tinkerforge_util.misc import ok, fatal
+import tinkerforge_util.misc as misc
 from tinkerforge_util.notify import notify, notify_clear
 
 __version__ = '{{{version}}}'
@@ -46,8 +46,7 @@ __all__ = [
     'base58_encode',
     'base58_decode',
     'get_serial_ports',
-    'ok',
-    'fatal',
+    'misc',
     'notify',
     'notify_clear',
 ]
