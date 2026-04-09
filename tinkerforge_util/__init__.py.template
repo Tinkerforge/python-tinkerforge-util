@@ -26,7 +26,7 @@ from tinkerforge_util.get_tf_printer_host import get_tf_printer_host
 from tinkerforge_util.drop_stdin_buffer import drop_stdin_buffer
 from tinkerforge_util.app_launcher import app_launcher, AppLauncherAction
 import tinkerforge_util.colored as colored
-from tinkerforge_util.base58 import base58_encode, base58_decode
+from tinkerforge_util.base58 import BASE58_ALPHABET, base58_encode, base58_decode
 from tinkerforge_util.get_serial_ports import get_serial_ports
 import tinkerforge_util.misc as misc
 from tinkerforge_util.notify import notify, notify_clear
@@ -43,6 +43,7 @@ __all__ = [
     'app_launcher',
     'AppLauncherAction',
     'colored',
+    'BASE58_ALPHABET',
     'base58_encode',
     'base58_decode',
     'get_serial_ports',

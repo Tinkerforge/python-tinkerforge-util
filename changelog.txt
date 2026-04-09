@@ -41,3 +41,4 @@
 
 2026-04-09: 1.8.0
 - Add findall for colors
+- Make BASE58_ALPHABET avialable

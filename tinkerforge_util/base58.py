@@ -18,7 +18,7 @@
 # Boston, MA 02111-1307, USA.
 #
 
-_BASE58 = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
+BASE58_ALPHABET = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
 
 
 def base58_encode(value):
@@ -26,10 +26,10 @@ def base58_encode(value):
 
     while value >= 58:
         div, mod = divmod(value, 58)
-        encoded = _BASE58[mod] + encoded
+        encoded = BASE58_ALPHABET[mod] + encoded
         value = div
 
-    return _BASE58[value] + encoded
+    return BASE58_ALPHABET[value] + encoded
 
 
 def base58_decode(encoded):
@@ -38,7 +38,7 @@ def base58_decode(encoded):
 
     for c in encoded[::-1]:
         try:
-            column = _BASE58.index(c)
+            column = BASE58_ALPHABET.index(c)
         except ValueError:
             raise Exception(f'Invalid character {repr(c)} in {repr(encoded)}')
 
