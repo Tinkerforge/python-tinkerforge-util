@@ -85,4 +85,26 @@ def gray(*args, bold=True):
 
 
 def strip(value):
-    return re.sub(rf'{"\x1b"}\[\d+(;\d+)?m', '', value)
+    return re.sub(rf'{"\x1b"}\[(1;)?\d+m', '', value)
+
+
+def findall(value):
+    colors = {
+        '31': 'red',
+        '32': 'green',
+        '33': 'yellow',
+        '34': 'blue',
+        '35': 'purple',
+        '36': 'cyan',
+        '90': 'gray',
+    }
+
+    result = []
+
+    for m in re.findall(rf'{"\x1b"}\[(?:1;)?(\d+)m', value):
+        color = colors.get(m)
+
+        if color != None and color not in result:
+            result.append(color)
+
+    return list(result)
