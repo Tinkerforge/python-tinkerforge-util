@@ -30,3 +30,7 @@ def ok(*args):
 def fatal(*args) -> NoReturn:
     print(red(*args))
     sys.exit(1)
+
+
+def flatten(list_of_lists):
+    return sum(list_of_lists, [])
